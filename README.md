@@ -24,11 +24,11 @@ Data models and initialization scripts of AwesomeTickets database.
 
 ## Conceptual data model
 
-![](./img/model/conceptual_data_model.png)
+![](https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/model/conceptual_data_model.png)
 
 ## Physical data model
 
-![](./img/model/physical_data_model.png)
+![](https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/model/physical_data_model.png)
 
 ## Credits
 
