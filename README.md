@@ -4,12 +4,23 @@ Data models and initialization scripts of AwesomeTickets database.
 
 [Dashboard](https://github.com/AwesomeTickets/Dashboard)
 
-## Initialize database
+## Installation
 
-```
-$ pip3 install PyMySQL
-$ python3 init_db.py
-```
+1. Download [MySQL](https://dev.mysql.com/downloads/mysql/).
+
+2. Create user:
+
+    ```
+    username: root
+    password: 123456
+    ```
+
+3. Initialize database:
+
+    ```sh
+    $ pip3 install PyMySQL
+    $ python3 init_db.py
+    ```
 
 ## Conceptual data model
 
