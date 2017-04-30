@@ -1,6 +1,6 @@
 # Database
 
-Data model and initialization scripts of AwesomeTickets database.
+Data models and initialization scripts of AwesomeTickets database.
 
 [Dashboard](https://github.com/AwesomeTickets/Dashboard)
 
