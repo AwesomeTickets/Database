@@ -19,6 +19,10 @@ $ python3 init_db.py
 
 ![](./img/physical_data_model.png)
 
+## Credits
+
+- PowerDesigner 16.5.0
+
 ## License
 
 See the [LICENSE](./LICENSE) file for license rights and limitations.
