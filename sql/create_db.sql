@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS awesome_tickets;
+CREATE DATABASE IF NOT EXISTS awesome_tickets;
