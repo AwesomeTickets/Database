@@ -13,11 +13,11 @@ $ python3 init_db.py
 
 ## Conceptual data model
 
-![](./img/conceptual_data_model.png)
+![](./img/model/conceptual_data_model.png)
 
 ## Physical data model
 
-![](./img/physical_data_model.png)
+![](./img/model/physical_data_model.png)
 
 ## Credits
 
