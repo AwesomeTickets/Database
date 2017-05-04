@@ -158,9 +158,9 @@ create table R_Movie_MovieStyle
    movie_id             int not null,
    movie_style_id       int not null,
    primary key (movie_id, movie_style_id),
-   constraint FK_R_Movie_MovieStyle foreign key (movie_id)
+   constraint FK_R_MovieStyle_Movie foreign key (movie_id)
       references Movie (movie_id) on delete cascade on update cascade,
-   constraint FK_R_Movie_MovieStyle2 foreign key (movie_style_id)
+   constraint FK_R_Movie_MovieStyle foreign key (movie_style_id)
       references MovieStyle (movie_style_id) on delete cascade on update cascade
 )
 engine = InnoDB
@@ -235,7 +235,7 @@ create table TicketCode
    code                 char(10) not null comment '取票码',
    primary key (code)
 )
-engine = MYISAM
+engine = InnoDB
 default character set = utf8;
 
 alter table TicketCode comment '已生成过的取票码';
