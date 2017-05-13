@@ -16,6 +16,17 @@ TEST_PHONE_1 = '18812345678'
 TEST_PHONE_2 = '18813572468'
 TEST_TICKET_CODE = "1000000000"
 
+# Intialize with sql scripts
+print("Initializing sql scripts...")
+os.system("mysql -u%s -p%s < ./sql/create_db.sql"
+          % (USER, PSWD))
+os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
+          % (DB_NAME, USER, PSWD))
+os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
+          % (DB_NAME, USER, PSWD))
+
+# Connect database
+print("Connecting database...")
 conn = mdb.connect(host='localhost',
                    user=USER,
                    password=PSWD,
@@ -29,15 +40,6 @@ try:
         cursor.execute("SELECT VERSION()")
         data = cursor.fetchone()
         print("MySQL version: %s" % data)
-
-        # Intialize with sql scripts
-        print("Initializing sql scripts...")
-        os.system("mysql -u%s -p%s < ./sql/create_db.sql"
-                  % (USER, PSWD))
-        os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
-                  % (DB_NAME, USER, PSWD))
-        os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
-                  % (DB_NAME, USER, PSWD))
 
         # Find available movies
         print("Finding available movies...")
