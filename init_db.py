@@ -13,15 +13,8 @@ TEST_SHOW_DATE = ['2017-05-01', '2017-05-02', '2017-05-03']
 TEST_SHOW_TIME = ['10:05:00', '13:20:00', '16:35:00', '19:50:00', '22:05:00']
 TEST_PRICE = [20.5, 22.5, 28, 35, 37, 41.5]
 TEST_PHONE_1 = '18812345678'
-TEST_PHONE_2 = '18813572648'
+TEST_PHONE_2 = '18813572468'
 TEST_TICKET_CODE = "1000000000"
-
-os.system("mysql -u%s -p%s < ./sql/create_db.sql"
-          % (USER, PSWD))
-os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
-          % (DB_NAME, USER, PSWD))
-os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
-          % (DB_NAME, USER, PSWD))
 
 conn = mdb.connect(host='localhost',
                    user=USER,
@@ -36,6 +29,15 @@ try:
         cursor.execute("SELECT VERSION()")
         data = cursor.fetchone()
         print("MySQL version: %s" % data)
+
+        # Intialize with sql scripts
+        print("Initializing sql scripts...")
+        os.system("mysql -u%s -p%s < ./sql/create_db.sql"
+                  % (USER, PSWD))
+        os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
+                  % (DB_NAME, USER, PSWD))
+        os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
+                  % (DB_NAME, USER, PSWD))
 
         # Find available movies
         print("Finding available movies...")
