@@ -170,7 +170,8 @@ create table User
 (
    user_id              int not null auto_increment,
    phone_num            char(11) not null comment '手机号',
-   remain_purchase      int not null default 4 comment '剩余购票次数',
+   password             char(32) not null comment '密码（哈希值）',
+   remain_purchase      int not null default 99999 comment '剩余购票次数',
    primary key (user_id)
 )
 engine = InnoDB
