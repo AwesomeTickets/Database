@@ -2,8 +2,6 @@
 
 Data models and initialization scripts of AwesomeTickets database.
 
-[Dashboard](https://github.com/AwesomeTickets/Dashboard)
-
 ## Installation
 
 1. Download [MySQL](https://dev.mysql.com/downloads/mysql/).
