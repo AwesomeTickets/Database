@@ -117,8 +117,8 @@ try:
         # Add test users
         print("Adding test users...")
         cursor.execute("""
-            INSERT INTO User (phone_num, remain_purchase)
-            VALUES ('%s', %s), ('%s', %s)
+            INSERT INTO User (phone_num, password, remain_purchase)
+            VALUES ('%s', '', %d), ('%s', '', %d)
         """ % (TEST_PHONE_1, 4, TEST_PHONE_2, 0))
 
     conn.commit()
