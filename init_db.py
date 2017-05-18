@@ -41,7 +41,6 @@ try:
         data = cursor.fetchone()
         print("MySQL version: %s" % data)
 
-        # Find available movies
         print("Finding available movies...")
         cursor.execute("""
             SELECT movie_id, country_name
@@ -58,7 +57,6 @@ try:
             movies.append(entry)
         print("movies:", movies)
 
-        # Find available cinema halls
         print("Finding available cinema halls...")
         cursor.execute("""
             SELECT cinema_hall_id
@@ -69,7 +67,6 @@ try:
             cinema_hall_ids.append(entry[0])
         print("cinema_hall_ids:", cinema_hall_ids)
 
-        # Add on show movies
         print("Adding on show movies...")
         candidate_movies = []
         for cinema_hall_id in cinema_hall_ids:
@@ -89,7 +86,6 @@ try:
                     """ % (movie[0], cinema_hall_id, movie[1],
                            date, time, price))
 
-        # Add seats
         print("Adding seats...")
         cursor.execute("""
             SELECT movie_on_show_id, seat_layout
@@ -114,7 +110,6 @@ try:
                         """ % (movie_on_show_id, i + 1, col, available))
                         col += 1
 
-        # Add test users
         print("Adding test users...")
         cursor.execute("""
             INSERT INTO User (phone_num, password, remain_purchase)

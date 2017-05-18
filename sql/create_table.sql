@@ -20,8 +20,6 @@ drop table if exists Seat;
 
 drop table if exists Ticket;
 
-drop table if exists TicketCode;
-
 drop table if exists User;
 
 create table Cinema
@@ -184,7 +182,7 @@ create table Ticket
    ticket_id            int not null auto_increment,
    user_id              int not null,
    valid                bool not null default True comment '电影票是否被取出',
-   digest               char(32) not null comment '取票码消息摘要',
+   code                 char(10) not null comment '取票码',
    primary key (ticket_id),
    constraint FK_R_Ticket_User foreign key (user_id)
       references User (user_id) on delete cascade on update cascade
@@ -226,20 +224,10 @@ create unique index IDX_id_row_col on Seat
    col
 );
 
-create unique index IDX_digest on Ticket
+create unique index IDX_code on Ticket
 (
-   digest
+   code
 );
-
-create table TicketCode
-(
-   code                 char(10) not null comment '取票码',
-   primary key (code)
-)
-engine = InnoDB
-default character set = utf8;
-
-alter table TicketCode comment '已生成过的取票码';
 
 create unique index IDX_phone_num on User
 (
