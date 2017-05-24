@@ -6,29 +6,28 @@ import os
 import random
 
 DB_NAME = 'awesome_tickets'
-USER = 'root'
-PSWD = '123456'
+DB_USER = 'root'
+DB_PSWD = '123456'
 GEN_RAND_SOLD_SEATS = False
 TEST_SHOW_DATE = ['2017-05-01', '2017-05-02', '2017-05-03']
 TEST_SHOW_TIME = ['10:05:00', '13:20:00', '16:35:00', '19:50:00', '22:05:00']
 TEST_PRICE = [20.5, 22.5, 28, 35, 37, 41.5]
 TEST_PHONE = '18813572468'
-TEST_TICKET_CODE = "1000000000"
 
 # Intialize with sql scripts
 print("Initializing sql scripts...")
 os.system("mysql -u%s -p%s < ./sql/create_db.sql"
-          % (USER, PSWD))
+          % (DB_USER, DB_PSWD))
 os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
-          % (DB_NAME, USER, PSWD))
+          % (DB_NAME, DB_USER, DB_PSWD))
 os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
-          % (DB_NAME, USER, PSWD))
+          % (DB_NAME, DB_USER, DB_PSWD))
 
 # Connect database
 print("Connecting database...")
 conn = mdb.connect(host='localhost',
-                   user=USER,
-                   password=PSWD,
+                   user=DB_USER,
+                   password=DB_PSWD,
                    db=DB_NAME,
                    charset='utf8')
 
