@@ -12,8 +12,7 @@ GEN_RAND_SOLD_SEATS = False
 TEST_SHOW_DATE = ['2017-05-01', '2017-05-02', '2017-05-03']
 TEST_SHOW_TIME = ['10:05:00', '13:20:00', '16:35:00', '19:50:00', '22:05:00']
 TEST_PRICE = [20.5, 22.5, 28, 35, 37, 41.5]
-TEST_PHONE_1 = '18812345678'
-TEST_PHONE_2 = '18813572468'
+TEST_PHONE = '18813572468'
 TEST_TICKET_CODE = "1000000000"
 
 # Intialize with sql scripts
@@ -113,8 +112,8 @@ try:
         print("Adding test users...")
         cursor.execute("""
             INSERT INTO User (phone_num, password, remain_purchase)
-            VALUES ('%s', '', %d), ('%s', '', %d)
-        """ % (TEST_PHONE_1, 4, TEST_PHONE_2, 0))
+            VALUES ('%s', '', %d)
+        """ % (TEST_PHONE, 0))
 
     conn.commit()
     print("Done.")
