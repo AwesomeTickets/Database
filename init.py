@@ -1,35 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import pymysql as mdb
+import pymysql
 import os
 import random
 
+DB_HOST = 'localhost'
 DB_NAME = 'awesome_tickets'
 DB_USER = 'root'
 DB_PSWD = '123456'
+DB_CHARSET = 'utf8'
+DB_CONN_SOCKET = '/var/run/mysqld/mysqld.sock'
 GEN_RAND_SOLD_SEATS = False
 TEST_SHOW_DATE = ['2017-05-01', '2017-05-02', '2017-05-03']
 TEST_SHOW_TIME = ['10:05:00', '13:20:00', '16:35:00', '19:50:00', '22:05:00']
 TEST_PRICE = [20.5, 22.5, 28, 35, 37, 41.5]
 TEST_PHONE = '18813572468'
 
-# Intialize with sql scripts
-print("Initializing sql scripts...")
-os.system("mysql -u%s -p%s < ./sql/create_db.sql"
-          % (DB_USER, DB_PSWD))
-os.system("mysql -D%s -u%s -p%s < ./sql/create_table.sql"
-          % (DB_NAME, DB_USER, DB_PSWD))
-os.system("mysql -D%s -u%s -p%s < ./sql/insert_data.sql"
-          % (DB_NAME, DB_USER, DB_PSWD))
+os.system("mysql --default-character-set=%s -u%s -p%s"
+          % (DB_CHARSET, DB_USER, DB_PSWD) +
+          "< ./sql/create_db.sql")
+os.system("mysql --default-character-set=%s -D%s -u%s -p%s"
+          % (DB_CHARSET, DB_NAME, DB_USER, DB_PSWD) +
+          "< ./sql/create_table.sql")
+os.system("mysql --default-character-set=%s -D%s -u%s -p%s"
+          % (DB_CHARSET, DB_NAME, DB_USER, DB_PSWD) +
+          "< ./sql/insert_data.sql")
 
-# Connect database
-print("Connecting database...")
-conn = mdb.connect(host='localhost',
-                   user=DB_USER,
-                   password=DB_PSWD,
-                   db=DB_NAME,
-                   charset='utf8')
+conn = pymysql.connect(host=DB_HOST,
+                       user=DB_USER,
+                       password=DB_PSWD,
+                       db=DB_NAME,
+                       charset=DB_CHARSET,
+                       unix_socket=DB_CONN_SOCKET)
 
 try:
     with conn.cursor() as cursor:
@@ -53,7 +56,7 @@ try:
             else:
                 entry[1] = u"国语"
             movies.append(entry)
-        print("movies:", movies)
+        print("movies amount:", len(movies))
 
         print("Finding available cinema halls...")
         cursor.execute("""
@@ -63,7 +66,7 @@ try:
         cinema_hall_ids = []
         for entry in cursor.fetchall():
             cinema_hall_ids.append(entry[0])
-        print("cinema_hall_ids:", cinema_hall_ids)
+        print("cinema_hall amount:", len(cinema_hall_ids))
 
         print("Adding on show movies...")
         candidate_movies = []

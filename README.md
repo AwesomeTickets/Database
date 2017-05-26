@@ -1,30 +1,36 @@
-# Database
+# DatabaseServer
 
-Data models and initialization scripts of AwesomeTickets database.
+Database server of AwesomeTickets system.
 
 ## Installation
 
-1. Download [MySQL](https://dev.mysql.com/downloads/mysql/).
+- Requirements
 
-2. Create user:
+    - MySQL 5.7
+    - username: root
+    - password: 123456
 
-    ```
-    username: root
-    password: 123456
-    ```
+- Initialize data
 
-3. Initialize database:
-
-    ```sh
-    $ pip3 install PyMySQL
-    $ python3 init_db.py
+    ```bash
+    $ pip3 install -r requirements.txt
+    $ python3 init.py
     ```
 
-## Conceptual data model
+- Run with docker
+
+    ```bash
+    $ docker build -t db-server .
+    $ docker run --rm --name db-server -p 3306:3306 -d db-server
+    ```
+
+## Models
+
+### Conceptual data model
 
 ![](https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/model/conceptual_data_model.png)
 
-## Physical data model
+### Physical data model
 
 ![](https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/model/physical_data_model.png)
 
