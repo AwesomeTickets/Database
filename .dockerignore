@@ -1,5 +1,6 @@
 .git
 .gitignore
+.gitattributes
 README.md
 LICENSE
 
