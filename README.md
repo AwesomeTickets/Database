@@ -21,7 +21,7 @@ Database server of AwesomeTickets system.
 
     ```bash
     $ docker build -t db-server .
-    $ docker run --rm --name db-server -p 3306:3306 -d db-server
+    $ docker run --name db-server -p 3306:3306 -d db-server
     ```
 
 ## Models
