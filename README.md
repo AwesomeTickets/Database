@@ -10,18 +10,17 @@ Database server of AwesomeTickets system.
     - username: root
     - password: 123456
 
-- Initialize data
+- Insert initial data
 
     ```bash
     $ pip3 install -r requirements.txt
     $ python3 init.py
     ```
 
-- Run with docker
+- Build docker image
 
     ```bash
     $ docker build -t db-server .
-    $ docker run --name db-server -p 3306:3306 -d db-server
     ```
 
 ## Models
