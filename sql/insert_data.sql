@@ -11,24 +11,24 @@ INSERT INTO MovieStyle (style_name) VALUES
 
 INSERT INTO Movie
 (country_id, movie_status_id, movie_type_id, pub_date, title, rating, length, poster_small, poster_large) VALUES
-(1, 1, 2, '2017-03-17', "美女与野兽", 8.2, 130, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/1.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/large/1.png"),
-(1, 2, 3, '2017-04-14', "速度与激情8", DEFAULT, 136, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/data/img/poster/small/2.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/large/2.png"),
-(1, 2, 3, '2017-04-07', "攻壳机动队", DEFAULT, 107, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/3.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/large/3.png"),
-(1, 1, 3, '2017-03-03', "金刚狼3：殊死一战", 8.7, 123, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/4.jpg", ""),
-(1, 1, 1, '2017-02-17', "欢乐好声音", 9.2, 108, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/5.jpg", ""),
-(2, 2, 1, '2017-04-02', "麦兜当当伴我心", DEFAULT, 80, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/6.jpg", ""),
-(2, 2, 2, '2017-05-02', "八万里", DEFAULT, 91, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/7.jpg", ""),
-(1, 1, 3, '2017-02-10', "极限特工：终极回归", 8.7, 107, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/8.jpg", ""),
-(1, 1, 1, '2017-02-14', "爱乐之城", 8.6, 129, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/9.jpg", ""),
-(1, 1, 1, '2017-03-03', "一条狗的使命", 9.0, 101, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/10.jpg", ""),
-(1, 1, 3, '2017-03-24', "金刚：骷髅岛", 8.3, 119, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/11.jpg", ""),
-(3, 2, 1, '2017-04-01', "冰雪大作战", DEFAULT, 83, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/12.jpg", ""),
-(2, 2, 1, '2017-03-31', "绑架者", DEFAULT, 95, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/13.jpg", ""),
-(2, 2, 1, '2017-03-31', "非凡任务", DEFAULT, 122, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/14.jpg", ""),
-(1, 1, 2, '2017-02-24', "生化危机：终章", 8.5, 99, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/15.jpg", ""),
-(2, 1, 1, '2017-03-24', "八月", 7.8, 106, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/16.jpg", ""),
-(2, 2, 1, '2017-03-31', "嫌疑人x的献身", DEFAULT, 112, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/17.jpg", ""),
-(2, 2, 1, '2017-04-01', "有完没完", DEFAULT, 99, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/data/img/poster/small/18.jpg", "");
+(1, 1, 2, '2017-03-17', "美女与野兽", 8.2, 130, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/1.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/large/1.png"),
+(1, 2, 3, '2017-04-14', "速度与激情8", DEFAULT, 136, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/2.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/large/2.png"),
+(1, 2, 3, '2017-04-07', "攻壳机动队", DEFAULT, 107, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/3.jpg", "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/large/3.png"),
+(1, 1, 3, '2017-03-03', "金刚狼3：殊死一战", 8.7, 123, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/4.jpg", ""),
+(1, 1, 1, '2017-02-17', "欢乐好声音", 9.2, 108, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/5.jpg", ""),
+(2, 2, 1, '2017-04-02', "麦兜当当伴我心", DEFAULT, 80, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/6.jpg", ""),
+(2, 2, 2, '2017-05-02', "八万里", DEFAULT, 91, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/7.jpg", ""),
+(1, 1, 3, '2017-02-10', "极限特工：终极回归", 8.7, 107, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/8.jpg", ""),
+(1, 1, 1, '2017-02-14', "爱乐之城", 8.6, 129, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/9.jpg", ""),
+(1, 1, 1, '2017-03-03', "一条狗的使命", 9.0, 101, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/10.jpg", ""),
+(1, 1, 3, '2017-03-24', "金刚：骷髅岛", 8.3, 119, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/11.jpg", ""),
+(3, 2, 1, '2017-04-01', "冰雪大作战", DEFAULT, 83, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/12.jpg", ""),
+(2, 2, 1, '2017-03-31', "绑架者", DEFAULT, 95, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/13.jpg", ""),
+(2, 2, 1, '2017-03-31', "非凡任务", DEFAULT, 122, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/14.jpg", ""),
+(1, 1, 2, '2017-02-24', "生化危机：终章", 8.5, 99, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/15.jpg", ""),
+(2, 1, 1, '2017-03-24', "八月", 7.8, 106, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/16.jpg", ""),
+(2, 2, 1, '2017-03-31', "嫌疑人x的献身", DEFAULT, 112, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/17.jpg", ""),
+(2, 2, 1, '2017-04-01', "有完没完", DEFAULT, 99, "https://raw.githubusercontent.com/AwesomeTickets/Database/master/img/poster/small/18.jpg", "");
 
 INSERT INTO R_Movie_MovieStyle (movie_id, movie_style_id) VALUES
 (1, 4), (1, 5), (1, 6),
